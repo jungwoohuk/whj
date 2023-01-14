@@ -114,22 +114,22 @@ $('.next').on('click', function(){
     $('.slide-container').css('transform', 'translateX(-' + 지금사진 + 'vw)');
     지금사진 += 50;
     console.log(지금사진);
-    if(지금사진 == 200){
+    if(지금사진 == 250){
       $('.slide-container').css('transform', 'translateX(0vw)');
       return 지금사진 = 50;
     }
 })
 
     $('.before').on('click',function(){
-      if(지금사진 == 150){
+      if(지금사진 == 200){
         $('.slide-container').css('transform','translateX(-50vw');
         지금사진-=50;
         console.log(지금사진);
-      }else if(지금사진 == 100){
+      }else if(지금사진 == 150){
        $('.slide-container').css('transform','translateX(0vw');
        지금사진-=50
        console.log(지금사진);
-     }else if(지금사진 == 50){
+     }else if(지금사진 == 100){
       $('.slide-container').css('transform','translateX(-100vw');
       console.log(지금사진); 
       return 지금사진 = 150;
