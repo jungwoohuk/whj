@@ -114,22 +114,22 @@ $('.next').on('click', function(){
     $('.slide-container').css('transform', 'translateX(-' + 지금사진 + 'vw)');
     지금사진 += 50;
     console.log(지금사진);
-    if(지금사진 == 250){
+    if(지금사진 == 200){
       $('.slide-container').css('transform', 'translateX(0vw)');
       return 지금사진 = 50;
     }
 })
 
     $('.before').on('click',function(){
-      if(지금사진 == 200){
+      if(지금사진 == 150){
         $('.slide-container').css('transform','translateX(-50vw');
         지금사진-=50;
         console.log(지금사진);
-      }else if(지금사진 == 150){
+      }else if(지금사진 == 100){
        $('.slide-container').css('transform','translateX(0vw');
        지금사진-=50
        console.log(지금사진);
-     }else if(지금사진 == 100){
+     }else if(지금사진 == 50){
       $('.slide-container').css('transform','translateX(-100vw');
       console.log(지금사진); 
       return 지금사진 = 150;
@@ -183,110 +183,13 @@ $('.next').on('click', function(){
             $('.slide-txt-1').addClass('before0-move')
 
         }
+
      });
 
 
-
-document.querySelector('.button-success').addEventListener('click',function(e){
-    if($('#name').val() ==''){
-        alert('이름을 입력해주세요');
-        e.preventDefault(e);
-    }if($('#message').val() ==''){
-        alert('메세지를 입력해주세요');
-        e.preventDefault(e);
-    }if($('#email').val()==''){
-        alert('이메일을 입력해주세요');
-        e.preventDefault(e);
-    }else{
-        alert('전송완료 감사합니다');
-    }
-     
+document.getElementsByClassName('button-success')[0].addEventListener('click',function(){
+     alert('전송완료');
  });
-
-
-//  $('form').on('submit',function(e){
-          
-//     if($('#id').val() == ''){
-      
-//       alert('아이디를입력해주세요');
-//       e.preventDefault(e);
-//     }if($('#pw').val() == ''){
-//       alert('비밀번호입력');
-//       e.preventDefault(e);
-//     }else if($('#pw').val().length < 6){
-//       alert('비밀번호가 너무 짧아요');
-//       e.preventDefault(e);
-//     }
-    
-//   })
-
-//  $('.next').on('click', function(){
-//     $('.slide-container').css('transform', 'translateX(-' + 지금사진 + 'vw)');
-//     지금사진 += 50;
-//     console.log(지금사진);
-//     if(지금사진 == 200){
-//       $('.slide-container').css('transform', 'translateX(0vw)');
-//       return 지금사진 = 50;
-//     }
-// })
-$('.ptli-box').click(function(){
-    $('.ptli-backbg').addClass('show');
-});
-$('.ptli-close').click(function(){
-    $('.ptli-backbg').removeClass('show');
-});
-
-var 현재사진=1;
-
-$('.left').click(function(){ 
-    현재사진+= 1
-    console.log(현재사진);
-    if(현재사진 == 1){
-        $('.ptli-whitebg-img').css('transform','translateY(0vh)');
-    }
-    else if(현재사진 == 2){
-        $('.ptli-whitebg-img').css('transform','translateY(-80vh)');
-    }else if(현재사진 ==3){
-        $('.ptli-whitebg-img').css('transform','translateY(-160vh)');
-    }else if(현재사진 ==4){
-        $('.ptli-whitebg-img').css('transform','translateY(-240vh)');
-    }else if(현재사진 ==5){
-        $('.ptli-whitebg-img').css('transform','translateY(-320vh)');
-    }else if(현재사진 ==6){
-        $('.ptli-whitebg-img').css('transform','translateY(-400vh)');
-    }else{
-        $('.ptli-whitebg-img').css('transform','translateY(0vh)');
-        return 현재사진 = 1;
-    }
-    
-
-})
-
-
-$('.right').click(function(){ 
-    현재사진+= -1
-    console.log(현재사진);
-    if(현재사진 == 1){
-        $('.ptli-whitebg-img').css('transform','translateY(0vh)');
-    }
-    else if(현재사진 == 2){
-        $('.ptli-whitebg-img').css('transform','translateY(-80vh)');
-    }else if(현재사진 ==3){
-        $('.ptli-whitebg-img').css('transform','translateY(-160vh)');
-    }else if(현재사진 ==4){
-        $('.ptli-whitebg-img').css('transform','translateY(-240vh)');
-    }else if(현재사진 ==5){
-        $('.ptli-whitebg-img').css('transform','translateY(-320vh)');
-    }else if(현재사진 ==6){
-        $('.ptli-whitebg-img').css('transform','translateY(-400vh)');
-    }else{
-        $('.ptli-whitebg-img').css('transform','translateY(-400vh)');
-        return 현재사진 = 6;
-    }
-    
-
-})
-
 
  
     
